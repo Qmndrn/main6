@@ -62,7 +62,7 @@ def load_budget_data(filepath):
 
 def update_budget(budget):
     new_budget = float(input("Введите новый бюджет: "))
-    added_money = new_budget - budget
+    added_money = new_budget + budget
     budget = new_budget
 
     if new_budget >= 0:
@@ -120,7 +120,7 @@ def init_question(budget, first_budget, expenses, filepath):
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--filepath", default="/home/mndrn/Рабочий стол/vscode/main6")
+    parser.add_argument("--filepath", default="Путь до папки")
     args = parser.parse_args()
     filepath = args.filepath
     loaded = load_budget_data(args.filepath)
